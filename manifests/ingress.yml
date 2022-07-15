@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "kubernetescluster-5759"
+    labels:
+        app: "kubernetescluster-5759"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: default-kubernetescluster-5759.72ef4fee0b664f4f9294.centralindia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "kubernetescluster-5759"
+                servicePort: 80

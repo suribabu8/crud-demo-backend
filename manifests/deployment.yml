@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernetescluster-5759"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernetescluster-5759"
+  template:
+    metadata:
+      labels:
+        app: "kubernetescluster-5759"
+    spec:
+      containers:
+        - name: "kubernetescluster-5759"
+          image: "democontainerregistry341.azurecr.io/kubernetescluster"
+          ports:
+          - containerPort: 80
